@@ -1,8 +1,9 @@
 version: "3"
 services:
-  api:
+  go-api:
     build: .
     ports:
-      - "8080:8080"
+      - "${IP}:8080:8080"
     working_dir: /app
     tty: true
+    container_name: go-api
