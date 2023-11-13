@@ -1,0 +1,18 @@
+{{define "mainPage"}}
+{{template "header" .}}
+<blockquote>
+  {{if eq .CommonData.Title "メインページだよ"}}
+  <div>{{.ContentString}}</div>
+  {{else}}
+  {{.ContentString}}
+  <div><input id="code" type="text" /></div>
+  <div><button onclick="movePage()">test</button></div>
+  <script>
+    function movePage() {
+      var code = document.getElementById("code").value;
+      window.location.href = '/dtlPage?code=' + code;
+    }
+  </script>
+  {{end}}
+</blockquote>
+{{end}}
