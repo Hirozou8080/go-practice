@@ -13,8 +13,8 @@ all:
 
 
 # buildされたファイルの削除
-clean:
-  $(shell rm bin/main)
+# clean:
+#   $(shell rm bin/main)
 
 build:
 	$(shell bin/main)
