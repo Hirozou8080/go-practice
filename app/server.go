@@ -32,10 +32,15 @@ func main() {
   }
   e.Renderer = renderer
 
-  // Named route "foobar"
-  e.GET("/something", func(c echo.Context) error {
-    return c.Render(http.StatusOK, "template.html", map[string]interface{}{
-  	  "name": "Dolly!",
+  e.GET("/user", func(c echo.Context) error {
+    return c.Render(http.StatusOK, "user.html", map[string]interface{}{
+  	  "name": "User!",
+    })
+  }).Name = "foobar"
+
+  e.GET("/post", func(c echo.Context) error {
+    return c.Render(http.StatusOK, "post.html", map[string]interface{}{
+  	  "name": "Post!",
     })
   }).Name = "foobar"
 
