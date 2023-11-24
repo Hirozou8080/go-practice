@@ -9,15 +9,15 @@ import (
   "github.com/labstack/echo/v4"
 )
 
-// TemplateRenderer is a custom html/template renderer for Echo framework
+// Echoフレームワーク用のカスタムhtml/テンプレートレンダラ
 type TemplateRenderer struct {
 	templates *template.Template
 }
 
-// Render renders a template document
+// テンプレート文書をレンダリングする
 func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
 
-  // Add global methods if data is a map
+  // データがマップの場合、グローバルメソッドを追加する
   if viewContext, isMap := data.(map[string]interface{}); isMap {
   	viewContext["reverse"] = c.Echo().Reverse
   }
@@ -28,13 +28,18 @@ func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c 
 func main() {
   e := echo.New()
   renderer := &TemplateRenderer{
-    templates: template.Must(template.ParseGlob("*.html")),
+    templates: template.Must(template.ParseGlob("views/*.html")),
   }
   e.Renderer = renderer
 
+
+	e.GET("/hello", func(c echo.Context) error{
+		return c.Render(http.StatusOK, "hello", "World")
+	})
+
   e.GET("/user", func(c echo.Context) error {
     return c.Render(http.StatusOK, "user.html", map[string]interface{}{
-  	  "name": "User!",
+  	  "name": "Usaaer!",
     })
   }).Name = "foobar"
 
