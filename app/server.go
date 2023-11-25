@@ -32,11 +32,6 @@ func main() {
   }
   e.Renderer = renderer
 
-
-	e.GET("/hello", func(c echo.Context) error{
-		return c.Render(http.StatusOK, "hello", "World")
-	})
-
   e.GET("/user", func(c echo.Context) error {
     return c.Render(http.StatusOK, "user.html", map[string]interface{}{
   	  "name": "Usaaer!",
@@ -49,5 +44,6 @@ func main() {
     })
   }).Name = "foobar"
 
+  Hello(e)
   e.Logger.Fatal(e.Start(":8080"))
 }
