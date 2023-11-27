@@ -5,8 +5,9 @@ import (
 	"html/template"
   "io"
   "net/http"
-
   "github.com/labstack/echo/v4"
+
+  
 )
 
 // Echoフレームワーク用のカスタムhtml/テンプレートレンダラ
@@ -44,6 +45,7 @@ func main() {
     })
   }).Name = "foobar"
 
-  Hello(e)
+  e.GET("hello",Hello)
+
   e.Logger.Fatal(e.Start(":8080"))
 }

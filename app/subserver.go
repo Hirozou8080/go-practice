@@ -1,12 +1,14 @@
 package main
 
-import {
-	"fmt"
+import (
+	"html/template"
+  "net/http"
+  "github.com/labstack/echo/v4"
+)
+
+type CustomContext struct {
+	echo.Context
 }
-
-func Hello(e){
-
-	e.GET("/hello", func(c echo.Context) error{
-		return c.Render(http.StatusOK, "hello", "Worldaaaa")
-	})
+func Hello(c *CustomContext) {
+	return c.Render(http.StatusOK, "hello", "Worldaaaa")
 }
