@@ -49,6 +49,6 @@ func main() {
 
   e.Logger.Fatal(e.Start(":8080"))
 }
-func Hello(c echo.Context) error {
-	return c.Render(http.StatusOK, "hello", "Worldaaaa")
-}
+// func Hello(c echo.Context) error {
+// 	return c.Render(http.StatusOK, "hello", "Worldaaaa")
+// }
