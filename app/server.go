@@ -5,9 +5,7 @@ import (
 	"html/template"
   "io"
   "net/http"
-  "github.com/labstack/echo/v4"
-
-  
+  "github.com/labstack/echo/v4" 
 )
 
 // Echoフレームワーク用のカスタムhtml/テンプレートレンダラ
