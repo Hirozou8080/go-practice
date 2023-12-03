@@ -1,7 +1,7 @@
-package cat
+package animal
 
 import "fmt"
 
-func Hello() {
+func Cat() {
 	fmt.Println("Meow")
 }
