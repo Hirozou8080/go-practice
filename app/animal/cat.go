@@ -2,6 +2,6 @@ package animal
 
 import "fmt"
 
-func Cat() {
+func Cat() string {
 	fmt.Println("Meow")
 }

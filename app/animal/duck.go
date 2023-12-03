@@ -2,6 +2,6 @@ package animal
 
 import "fmt"
 
-func Duck() {
+func Duck() string {
 	fmt.Println("Quack")
 }

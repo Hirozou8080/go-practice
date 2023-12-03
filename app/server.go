@@ -5,8 +5,9 @@ import (
 	"html/template"
   "io"
   "net/http"
+  "fmt"
   "github.com/labstack/echo/v4"
-  "animal/animal"
+  // "./animal"
 )
 
 // Echoフレームワーク用のカスタムhtml/テンプレートレンダラ
@@ -45,6 +46,8 @@ func main() {
   }).Name = "foobar"
 
   e.GET("hello",Hello)
+  // fmt.Println(animal.Duck)
+  fmt.Println("aaaa")
 
   e.Logger.Fatal(e.Start(":8080"))
 }
