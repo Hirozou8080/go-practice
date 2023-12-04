@@ -7,7 +7,7 @@ import (
   "net/http"
   "fmt"
   "github.com/labstack/echo/v4"
-  // "./animal"
+  "main/animal"
 )
 
 // Echoフレームワーク用のカスタムhtml/テンプレートレンダラ
