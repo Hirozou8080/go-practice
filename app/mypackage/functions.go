@@ -4,7 +4,7 @@ import "fmt"
 
 // ExportedFunction はエクスポートされた関数です。
 func ExportedFunction() {
-    fmt.Println("This is an exported function.")
+    fmt.Println("これはエクスポートされた関数です。")
 }
 
 // nonExportedFunction は非エクスポートされた関数です。
