@@ -1,6 +1,6 @@
 package main
 
-import "app/mypackage"
+import "main/mypackage"
 
 func main() {
     // エクスポートされた関数を呼び出す
