@@ -9,5 +9,6 @@ func ExportedFunction() {
 
 // nonExportedFunction は非エクスポートされた関数です。
 func nonExportedFunction() {
+    
     fmt.Println("This is a non-exported function.")
 }
